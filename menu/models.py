@@ -14,6 +14,11 @@ class Menu(models.Model):
     active = models.BooleanField(default=True)
     nutrition_score = models.FloatField(null=True)
     nutrition_grade = models.CharField(max_length=1, null=True)
+    ingredients = models.TextField(null=True)
+    allergen = models.BooleanField(default=False)
+    gluten = models.BooleanField(default=False)
+    lactose = models.BooleanField(default=False)
+    allergens = models.TextField(null=True)
 
     def __str__(self):
         return self.name
@@ -25,21 +30,6 @@ class Menu_image(models.Model):
     def __str__(self):
         return str(self.menu)
 
-
-class Menu_ingredient(models.Model):
-    menu = models.ForeignKey(Menu, on_delete=models.CASCADE)
-    ingredients = models.TextField(null=True)
-
-    def __str__(self):
-        return str(self.menu)
-
-
-class Menu_allergene(models.Model):
-    menu = models.ForeignKey(Menu, on_delete=models.CASCADE)
-    allergenes = models.TextField(null=True)
-
-    def __str__(self):
-        return str(self.menu)
     
 class Category(models.Model):
     menu = models.ForeignKey(Menu, on_delete=models.CASCADE)

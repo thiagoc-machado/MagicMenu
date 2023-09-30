@@ -1,10 +1,18 @@
 from django.contrib import admin
+from .models import Menu, Menu_image, Category
 
+class MenuImageInline(admin.TabularInline):  # Ou admin.StackedInline para uma exibição mais detalhada
+    model = Menu_image
+    extra = 1  # O número de formulários em branco exibidos para adicionar novas imagens
 
-from .models import *
+class CategoryInline(admin.TabularInline):  # Ou admin.StackedInline para uma exibição mais detalhada
+    model = Category
+    extra = 1  # O número de formulários em branco exibidos para adicionar novas categorias
 
-admin.site.register(Menu)
-admin.site.register(Menu_ingredient)
-admin.site.register(Menu_image)
-admin.site.register(Menu_allergene)
-admin.site.register(Category)
+class MenuAdmin(admin.ModelAdmin):
+    list_display = ('name', 'type', 'price', 'active', 'nutrition_score')
+    list_filter = ('type', 'active', 'allergen', 'gluten', 'lactose')
+    search_fields = ('name',)
+    inlines = [MenuImageInline, CategoryInline]
+
+admin.site.register(Menu, MenuAdmin)
