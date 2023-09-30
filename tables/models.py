@@ -23,8 +23,9 @@ class Seat(models.Model):
     chair_number = models.IntegerField(null=True)
     is_available = models.BooleanField(default=True)
     type = models.CharField(max_length=30, null=True)
+    qr_code = models.CharField(max_length=30, null=True)
+    description = models.TextField(null=True)
 
-   
 def created_at (self):
     return self.created_at.strftime('%Y-%m-%d %H:%M:%S')
 

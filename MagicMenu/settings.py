@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     "config",
     "tables",
     "employee",
+    "orders",
 ]
 
 MIDDLEWARE = [
