@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     "menu",
     "config",
     "tables",
+    "employee",
 ]
 
 MIDDLEWARE = [
