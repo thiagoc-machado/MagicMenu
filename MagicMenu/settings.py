@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     "clients",
     "menu",
     "config",
+    "tables",
 ]
 
 MIDDLEWARE = [
