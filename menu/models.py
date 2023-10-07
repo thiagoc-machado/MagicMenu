@@ -13,12 +13,13 @@ class Menu(models.Model):
     deleted_by = models.CharField(max_length=30, null=True)
     active = models.BooleanField(default=True)
     nutrition_score = models.FloatField(null=True)
-    nutrition_grade = models.CharField(max_length=1, null=True)
+    nutrition_grade = models.CharField(max_length=1, null=True, blank=True)
     ingredients = models.TextField(null=True)
     allergen = models.BooleanField(default=False)
     gluten = models.BooleanField(default=False)
     lactose = models.BooleanField(default=False)
     allergens = models.TextField(null=True)
+    
 
     def __str__(self):
         return self.name
