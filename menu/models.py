@@ -12,7 +12,7 @@ class Menu(models.Model):
     updated_by = models.CharField(max_length=30, null=True)
     deleted_by = models.CharField(max_length=30, null=True)
     active = models.BooleanField(default=True)
-    nutrition_score = models.FloatField(null=True)
+    nutrition_score = models.FloatField(null=True, blank=True)
     nutrition_grade = models.CharField(max_length=1, null=True, blank=True)
     ingredients = models.TextField(null=True)
     allergen = models.BooleanField(default=False)
