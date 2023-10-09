@@ -10,7 +10,7 @@ class Menu(models.Model):
     deleted_at = models.DateTimeField(auto_now=True, null=True)
     created_by = models.CharField(max_length=30, null=True)
     updated_by = models.CharField(max_length=30, null=True)
-    deleted_by = models.CharField(max_length=30, null=True)
+    deleted_by = models.CharField(max_length=30, null=True, blank=True)
     active = models.BooleanField(default=True)
     nutrition_score = models.FloatField(null=True, blank=True)
     nutrition_grade = models.CharField(max_length=1, null=True, blank=True)
