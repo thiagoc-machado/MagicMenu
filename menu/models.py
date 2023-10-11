@@ -8,7 +8,7 @@ class Menu(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True, null=True)
     deleted_at = models.DateTimeField(auto_now=True, null=True)
-    created_by = models.CharField(max_length=30, null=True)
+    created_by = models.CharField(max_length=30, null=True, blank=True)
     updated_by = models.CharField(max_length=30, null=True, blank=True)
     deleted_by = models.CharField(max_length=30, null=True, blank=True)
     active = models.BooleanField(default=True)
