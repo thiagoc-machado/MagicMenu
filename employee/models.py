@@ -3,7 +3,7 @@ from django.db import models
 class Employee(models.Model):
     name = models.CharField(max_length=50)
     email = models.EmailField(max_length=50, null=True)
-    phone = models.IntegerField(null=True)
+    phone = models.IntegerField(null=True,blank=True)
     photo = models.ImageField(upload_to='employee', null=True)
     notes = models.TextField(null=True)
     created_at = models.DateTimeField(auto_now_add=True)
