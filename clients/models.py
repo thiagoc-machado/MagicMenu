@@ -4,7 +4,7 @@ class Client(models.Model):
     name = models.CharField(max_length=50)
     email = models.EmailField(max_length=50, null=True)
     phone = models.IntegerField(null=True)
-    age = models.DateField(null=True)
+    age = models.DateField(null=True, blank=True)
     gender = models.CharField(max_length=50, null=True)
     address = models.CharField(max_length=50, null=True)
     city = models.CharField(max_length=50, null=True)
