@@ -5,7 +5,7 @@ class Client(models.Model):
     email = models.EmailField(max_length=50, null=True)
     phone = models.IntegerField(null=True)
     age = models.DateField(null=True, blank=True)
-    gender = models.CharField(max_length=50, null=True)
+    gender = models.CharField(max_length=50, null=True, blank=True)
     address = models.CharField(max_length=50, null=True)
     city = models.CharField(max_length=50, null=True)
     state = models.CharField(max_length=50, null=True)
