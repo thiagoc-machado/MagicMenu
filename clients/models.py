@@ -6,7 +6,7 @@ class Client(models.Model):
     phone = models.IntegerField(null=True)
     age = models.DateField(null=True, blank=True)
     gender = models.CharField(max_length=50, null=True, blank=True)
-    address = models.CharField(max_length=50, null=True)
+    address = models.CharField(max_length=50, null=True, blank=True)
     city = models.CharField(max_length=50, null=True)
     state = models.CharField(max_length=50, null=True)
     zip = models.IntegerField(null=True)
