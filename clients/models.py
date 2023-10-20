@@ -7,7 +7,7 @@ class Client(models.Model):
     age = models.DateField(null=True, blank=True)
     gender = models.CharField(max_length=50, null=True, blank=True)
     address = models.CharField(max_length=50, null=True, blank=True)
-    city = models.CharField(max_length=50, null=True)
+    city = models.CharField(max_length=50, null=True, blank=True)
     state = models.CharField(max_length=50, null=True)
     zip = models.IntegerField(null=True)
     country = models.CharField(max_length=50, null=True)
