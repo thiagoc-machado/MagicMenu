@@ -10,7 +10,7 @@ class Client(models.Model):
     city = models.CharField(max_length=50, null=True, blank=True)
     state = models.CharField(max_length=50, null=True, blank=True)
     zip = models.IntegerField(null=True, blank=True)
-    country = models.CharField(max_length=50, null=True)
+    country = models.CharField(max_length=50, null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True, null=True)
     deleted_at = models.DateTimeField(auto_now=True, null=True)
