@@ -17,7 +17,7 @@ class Client(models.Model):
     created_by = models.CharField(max_length=30, null=True, blank=True)
     updated_by = models.CharField(max_length=30, null=True, blank=True)
     deleted_by = models.CharField(max_length=30, null=True, blank=True)
-    status = models.CharField(max_length=50, null=True)
+    status = models.CharField(max_length=50, null=True, blank=True)
     notes = models.TextField(null=True)
     photo = models.ImageField(upload_to='clients', null=True)
 
