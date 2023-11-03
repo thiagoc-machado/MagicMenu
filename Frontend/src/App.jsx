@@ -1,22 +1,20 @@
-import { useState } from 'react'
-import Logo from './assets/logo-main2.png'
-import './App.css'
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import "./App.css";
+import Login from "./components/Login/login";
+import Client from "./components/Client_menu/client";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://react.dev" target="_blank">
-          <img src={Logo} className="logo" alt="logo" />
-        </a>
+    <BrowserRouter>
+      <div className="App">
+        MagicMenu
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route path="/client" element={<Client />} />
+        </Routes>
       </div>
-      <h1></h1>
-      <div className="card">
-      </div>
-    </>
-  )
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
