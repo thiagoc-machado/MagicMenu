@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 function NewUser() {
     const [formData, setFormData] = useState({
       name: '',
@@ -27,7 +29,7 @@ function NewUser() {
       e.preventDefault();
   
       try {
-        const response = await axios.post('/api/users/', formData);
+        const response = await axios.post('http://127.0.0.1:8000/api/users/', formData);
         console.log('Usuário cadastrado com sucesso:', response.data);
         // Redirecionar ou realizar outras ações após o cadastro bem-sucedido
       } catch (error) {
