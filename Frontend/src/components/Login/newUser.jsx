@@ -34,7 +34,7 @@ function NewUser() {
         // Redirecionar ou realizar outras ações após o cadastro bem-sucedido
       } catch (error) {
         console.error('Erro ao cadastrar usuário:', error);
-        // Lidar com erros, exibir mensagens de erro, etc.
+        // Lidar com erros
       }
     };
   
