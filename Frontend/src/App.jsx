@@ -1,21 +1,24 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import "./App.css";
-import Login from "./components/Login/login";
-import Client from "./components/Client_menu/client";
-import NewUser from "./components/Login/newUser";
+import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import PrivateRoute from './utils/PrivateRoute';
+import { AuthProvider } from './context/AuthContext';
+
+import HomePage from './pages/HomePage';
+import LoginPage from './pages/LoginPage';
+import Header from './components/Header';
 
 function App() {
   return (
-    <BrowserRouter>
-      <div className="App">
-        MagicMenu
-        <Routes>
-          <Route path="/" element={<Login />} />
-          <Route path="/client" element={<Client />} />
-          <Route path="/newuser" element={<NewUser />} />
-        </Routes>
-      </div>
-    </BrowserRouter>
+    <div className="App">
+      <AuthProvider>
+        <Router>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/login" element={<LoginPage />} />
+          </Routes>
+        </Router>
+      </AuthProvider>
+    </div>
   );
 }
 
