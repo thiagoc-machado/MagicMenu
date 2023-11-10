@@ -18,6 +18,7 @@ const Login = () => {
       const token = response.data.access; 
       console.log(token);
       localStorage.setItem('jwtToken', token);
+      // Redirect the user after login
       navigate('/client');
     } catch (error) {
       console.error('Erro ao fazer login:', error);
