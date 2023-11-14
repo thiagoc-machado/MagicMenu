@@ -1,8 +1,5 @@
 import React from 'react';
 import MenuItem from '../../components/menu_items/MenuItems';
-import Hamburguer from '../../assets/hamburguer.jpg'
-import '../../assets/hotdog.webp'
-import '../../assets/batata.webp'
 
 const MenuItems = () => {
   const items = [
@@ -29,10 +26,12 @@ const MenuItems = () => {
     }
   ];
 
+  const filteredItems = items.filter(item => item.id > 0);
+
   return (
     <div>
-      {items.map((item) => (
-        <MenuItem key={'menu '+items.id} {...item} />
+      {filteredItems.map((item) => (
+        <MenuItem key={'menu ' + item.id} id = {item.id} nome={item.nome} descricao={item.descricao} valor={item.valor} />
       ))}
     </div>
   );
