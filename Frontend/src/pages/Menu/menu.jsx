@@ -15,14 +15,14 @@ const MenuItems = () => {
       nome: 'Nome do Prato 2',
       descricao: 'Descrição do Prato 2',
       valor: 19.99,
-      imagemUrl: 'url_da_imagem_2.jpg',
+      imagemUrl: 'Pizza.jpg',
     },
     {
       id: 3,
       nome: 'Nome do Prato 3',
       descricao: 'Descrição do Prato 3',
       valor: 25.99,
-      imagemUrl: 'url_da_imagem_3.jpg',
+      imagemUrl: 'Hotdog.jpg',
     }
   ];
 
