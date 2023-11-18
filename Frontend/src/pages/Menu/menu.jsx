@@ -12,7 +12,7 @@ const MenuItems = () => {
     },
     {
       id: 2,
-      nome: 'Nome do Prato 2',
+      nome: 'Pizza',
       descricao: 'Peperone',
       valor: 19.99,
       imagemUrl: 'Pizza.jpg',
