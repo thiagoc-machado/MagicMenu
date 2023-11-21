@@ -19,7 +19,7 @@ const MenuItems = () => {
     },
     {
       id: 3,
-      nome: 'Nome do Prato 3',
+      nome: 'Hotdog',
       descricao: 'Descrição do Prato 3',
       valor: 25.99,
       imagemUrl: 'Hotdog.jpg',
