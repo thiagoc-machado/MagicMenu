@@ -6,7 +6,7 @@ const MenuItems = () => {
     {
       id: 1,
       nome: 'X-tudo',
-      descricao: 'Tudo',
+      descricao: 'x-Tudo',
       valor: 15.99,
       imagemUrl: 'Hamburguer',
     },
