@@ -1,6 +1,9 @@
 import React from 'react';
 import MenuItem from '../../components/menu_items/MenuItems';
-import '../../assets/hamburguer.webp'
+import XTodoImage from '../../assets/X-tudo.jpg';
+import PizzaImage from '../../assets/Pizza.jpg';
+import HotdogImage from '../../assets/Hotdog.jpg';
+import HamburguerImage from '../../assets/Hamburguer.webp';
 
 const MenuItems = () => {
   const items = [
@@ -9,28 +12,28 @@ const MenuItems = () => {
       nome: 'X-tudo',
       descricao: 'x-Tudo',
       valor: 15.99,
-      imagemUrl: 'X-tudo.jpg',
+      imagemUrl: XTodoImage,
     },
     {
       id: 2,
       nome: 'Pizza',
       descricao: 'Peperone',
       valor: 19.99,
-      imagemUrl: 'Pizza.jpg',
+      imagemUrl: PizzaImage,
     },
     {
       id: 3,
       nome: 'Hotdog',
       descricao: 'Cachorro quente',
       valor: 25.99,
-      imagemUrl: 'Hotdog.jpg',
+      imagemUrl: HotdogImage,
     },
     {
       id: 4,
       nome: 'Hamburguer',
       descricao: 'Hamburguer',
       valor: 15.99,
-      imagemUrl: 'Hamburguer.webp',
+      imagemUrl: HamburguerImage,
     }
   ];
 
@@ -39,7 +42,14 @@ const MenuItems = () => {
   return (
     <div>
       {filteredItems.map((item) => (
-        <MenuItem key={'menu ' + item.id} id = {item.id} nome={item.nome} descricao={item.descricao} valor={item.valor} />
+        <MenuItem
+          key={'menu ' + item.id}
+          id={item.id}
+          nome={item.nome}
+          descricao={item.descricao}
+          valor={item.valor}
+          imagemUrl={item.imagemUrl}
+        />
       ))}
     </div>
   );
