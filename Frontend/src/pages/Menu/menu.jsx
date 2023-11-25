@@ -1,5 +1,6 @@
 import React from 'react';
 import MenuItem from '../../components/menu_items/MenuItems';
+import '../../assets/hamburguer.webp'
 
 const MenuItems = () => {
   const items = [
@@ -8,7 +9,7 @@ const MenuItems = () => {
       nome: 'X-tudo',
       descricao: 'x-Tudo',
       valor: 15.99,
-      imagemUrl: 'Hamburguer',
+      imagemUrl: 'X-tudo.jpg',
     },
     {
       id: 2,
@@ -23,6 +24,13 @@ const MenuItems = () => {
       descricao: 'Cachorro quente',
       valor: 25.99,
       imagemUrl: 'Hotdog.jpg',
+    },
+    {
+      id: 4,
+      nome: 'Hamburguer',
+      descricao: 'Hamburguer',
+      valor: 15.99,
+      imagemUrl: 'Hamburguer.webp',
     }
   ];
 
