@@ -34,7 +34,16 @@ const MenuItems = () => {
       descricao: 'Hamburguer',
       valor: 15.99,
       imagemUrl: HamburguerImage,
+    },
+    {
+      id: 5,
+      nome: 'taco',
+      descricao: 'taco',
+      valor: 5.99,
+      imagemUrl: XTodoImage,
     }
+
+
   ];
 
   const filteredItems = items.filter(item => item.id > 0);
