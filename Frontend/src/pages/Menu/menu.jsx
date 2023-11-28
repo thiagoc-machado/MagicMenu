@@ -48,8 +48,8 @@ const MenuItems = () => {
       descricao: 'burger',
       valor: 5.99,
       imagemUrl: XTodoImage,
-    },
-    
+    }
+
 
 
   ];
