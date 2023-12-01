@@ -49,9 +49,6 @@ const MenuItems = () => {
       valor: 5.99,
       imagemUrl: XTodoImage,
     }
-
-
-
   ];
 
   const filteredItems = items.filter(item => item.id > 0);

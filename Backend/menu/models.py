@@ -18,7 +18,7 @@ class Menu(models.Model):
     allergen = models.BooleanField(default=False)
     gluten = models.BooleanField(default=False)
     lactose = models.BooleanField(default=False)
-    allergens = models.TextField(null=True)
+    allergens = models.TextField(null=True, blank=False)
     
 
     def __str__(self):
