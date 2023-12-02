@@ -14,12 +14,14 @@ class Menu(models.Model):
     active = models.BooleanField(default=True)
     nutrition_score = models.FloatField(null=True, blank=True)
     nutrition_grade = models.CharField(max_length=1, null=True, blank=True)
-    ingredients = models.TextField(null=True)
-    allergen = models.BooleanField(default=False)
-    gluten = models.BooleanField(default=False)
-    lactose = models.BooleanField(default=False)
-    allergens = models.TextField(null=True, blank=False)
-    
+    ingredients = models.TextField(null=True, blank=True)
+    gluten = models.BooleanField(default=False, null=True, blank=True)
+    lactose = models.BooleanField(default=False, null=True, blank=True)
+    allergens = models.TextField(null=True, blank=True)
+    allergen = models.BooleanField(default=False, null=True, blank=True)
+    vegan = models.BooleanField(default=False, null=True, blank=True)
+    vegetarian = models.BooleanField(default=False, null=True, blank=True)
+
 
     def __str__(self):
         return self.name
