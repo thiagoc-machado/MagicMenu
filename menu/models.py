@@ -2,8 +2,8 @@ from django.db import models
 
 class Menu(models.Model):
     name = models.CharField(max_length=200)
-    type = models.CharField(max_length=200)
-    price = models.IntegerField(null=True)
+    type = models.CharField(max_length=200, null=True, blank=True)
+    price = models.IntegerField(null=True, blank=True)
     description = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True, null=True)
