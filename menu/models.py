@@ -4,7 +4,7 @@ class Menu(models.Model):
     name = models.CharField(max_length=200)
     type = models.CharField(max_length=200, null=True, blank=True)
     price = models.IntegerField(null=True, blank=True)
-    description = models.TextField()
+    description = models.TextField(null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True, null=True)
     deleted_at = models.DateTimeField(auto_now=True, null=True, blank=True)
